@@ -1,0 +1,129 @@
+
+<div>
+  <navbar></navbar>
+</div>
+<div *ngIf="this.repo.showsucessfull" class="d-flex justify-content-center align-items-center">
+  <img src="https://tse2.mm.bing.net/th?id=OIP.jZsq5eYd1iRkN2b3KNstJwHaFj&pid=Api&P=0&h=180">
+</div>
+  <div class="container-fluid payments" id="payments-id"  style="width: 100%; height: 90vh;margin-top: 10px;"  *ngIf="showallpayments">
+
+    <div class="payments-main w-100 p-4  h-100 ">
+        <div class="row w-100 h-75">
+            <div class="col-4 payment-sidebar p-3 d-flex flex-column flex-wrap justify-content-center align-items-center  ">
+                <div>
+                    <img class=" border border-light border-2 rounded rounded-3" [class.one]="cnet==true" (click)="changeBank()" src="https://img.freepik.com/premium-vector/cnet-building-money-cnet-financing-money-exchange-financial-services-atm-giving-out-money_625536-194.jpg"
+                        alt="">
+                    <h4 class="text-dark mt-2 mb-4 ms-4" [class.active]="cnet==true"  (click)="changeBank()" >Banks</h4>
+                </div>
+                <div>
+                    <img class=" border border-light border-2 rounded rounded-3" [class.one]="ccard==true"(click)="changeCards()" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx-JLx_qBg1ioF0vixekHAmrr6v9Sh3p9HsO11YNwbBA&usqp=CAU&ec=48600113"
+                        alt="">
+                    <h4 class="text-dark mt-2 mb-4 ms-4" (click)="changeCards()">Cards</h4>
+                </div>
+                <div>
+                    <img class=" border border-light border-2 rounded rounded-3"[class.one]="cupi==true" (click)="changeUpi()" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/UPI-Logo.png"
+                        alt="">
+                    <h4 class="text-dark mt-2 mb-4 ms-4 " (click)="changeUpi()">UPI</h4>
+                </div>
+                <div>
+                    <button class="btn btn-danger" routerLink="/user-cart">cancel</button>
+                    <!-- <button class="btn btn-warning ms-2">Confirm</button> -->
+                </div>
+            </div>
+            <div *ngIf="cnet" class="col-8  payment-continer h-100">
+                <div class="row m-3 p-4 w-100 d-flex  justify-content-center align-items-center" id="cnet">
+                       <div class="col-6">
+                            <div  class=" mx-4 mb-4 pe-4">
+                                <img class=" " (click)="payed()" src="https://akm-img-a-in.tosshub.com/businesstoday/images/story/202107/axis-.png" alt="">
+                            </div>
+                            <div class=" mx-4 mb-4 pe-4">
+                                <img class=" " (click)="payed()"  src="https://logos-download.com/wp-content/uploads/2016/06/Bank_of_Baroda_logo_orange_background.png" alt="">
+                            </div>
+                       </div>
+
+                        <div class="col-6">
+                            <div class=" mx-4 mb-4 pe-4 ">
+                                <img class=" " (click)="payed()" src="https://www.freepnglogos.com/uploads/sbi-logo-png/why-sbi-billion-loan-adani-doesn-make-sense-5.png" alt="">
+                            </div>
+                            <div class=" mx-4 mb-4 pe-4">
+                                <img class=" " (click)="payed()" src="https://i.pinimg.com/originals/ff/d5/31/ffd531a6a78464512a97848e14506738.png" alt="">
+                            </div>
+
+                        </div>
+                </div>
+            </div>
+
+            <div *ngIf="ccard" class="col-8  payment-continer ">
+                <div class="row m-3 p-4 w-100 d-flex " id="cnet">
+                       <div>
+                            <div  class=" mx-4 mb-4 pe-4">
+                                <img class=" " (click)="payed()" src="https://freepngimg.com/thumb/atm_card/12-2-atm-card-download-png.png" alt="">
+                            </div>
+                            <div class=" mx-4 mb-4 pe-4">
+                                <img class=" " (click)="payed()" src="https://images.pexels.com/photos/210742/pexels-photo-210742.jpeg?cs=srgb&dl=pexels-pixabay-210742.jpg&fm=jpg" alt="">
+                            </div>
+                            <div class=" mx-4 mb-4 pe-4">
+                                <img class=" " (click)="payed()" src="https://c1.wallpaperflare.com/preview/586/543/577/cheque-guarantee-card-credit-card-credit-ccard-ec-ccard.jpg" alt="">
+                            </div>
+                       </div>
+                </div>
+            </div>
+
+            <div *ngIf="cupi" class="col-8  payment-continer ">
+                <div class="row m-3 p-4 w-100 d-flex " id="cnet">
+                       <div class="col-6">
+                            <div  class=" mx-4 mb-4 pe-4">
+                                <img class=" " (click)="payed()" src="https://www.gelq.it/modules/ybc_blog/views/img/post/AmazonPayPOSTEN.jpg" alt="">
+                            </div>
+                            <div class=" mx-4 mb-4 pe-4">
+                                <img class=" " (click)="payed()" src="https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2020/11/google-pay-new-logo-1604560912.jpg" alt="">
+                            </div>
+                       </div >
+                       <div class="col-6">
+                        <div  class=" mx-4 mb-4 pe-4">
+                            <img class=" " (click)="payed()" src="https://www.pngitem.com/pimgs/m/3-38170_phonepe-logo-png-phone-pe-transparent-png.png" alt="">
+                        </div>
+                        <div class=" mx-4 mb-4 pe-4">
+                            <img class=" " (click)="payed()" src="https://ptcnews-wp.s3.ap-south-1.amazonaws.com/wp-content/uploads/2019/04/pa.jpg" alt="">
+                        </div>
+
+                   </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
+
+</div>
+
+
+<div class="cardmain">
+  <div class="card" *ngIf="showcard" style="width: 400px;">
+    <div class="card-body">
+      <h5 class="card-title">Mobile Number Verification</h5>
+      <div class="form-group">
+        <label for="mobileNumber">Mobile Number:</label>
+        <div class="input-group">
+          <input type="text" class="form-control" id="mobileNumber" name="mobileNumber" placeholder="Enter your mobile number" [(ngModel)]="messageobj.to" style="margin-right: 10px;">
+          <button class="btn btn-success" (click)="generateOTP()">Generate OTP</button>
+        </div>
+      </div>
+      <div *ngIf="showOtpField">
+        <label>Enter Your Otp</label>
+        <div class="input-group">
+          <input type="text" class="form-control" id="mobileNumber" name="otp" placeholder="Enter your OTP" [(ngModel)]="enteredotp">
+          <button class="btn btn-success" (click)="verifyOTP()">Verify OTP</button>
+        </div>
+
+      </div>
+      </div>
+    </div>
+  </div>
+
+
+

@@ -1,0 +1,73 @@
+
+<form [formGroup]="courtForm" novalidate (ngSubmit)="onSubmit()">
+
+  <mat-form-field appearance="fill" >
+    <mat-label>Select an option</mat-label>
+    <mat-select [(value)]="selectedStadium" onchange="send()">
+      <mat-option>None</mat-option>
+      <mat-option  value="{{sport.stadiumName}}" *ngFor="let sport of stadiumarray">{{sport.stadiumName}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <p>You selected: {{selectedStadium}}</p>
+
+
+  <mat-form-field appearance="fill" >
+    <mat-label>Select sport</mat-label>
+    <mat-select [(value)]="selectedSport"  >
+      <mat-option>None</mat-option>
+      <mat-option value="{{ sport.sportName }}" *ngFor="let sport of getStadiums(selectedStadium)" >
+        {{ sport.sportName }}
+       
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <p>You selected: {{selectedSport}} sport</p>
+
+
+    <mat-card class="shipping-card">
+    <mat-card-header>
+      <mat-card-title>Add court</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+              <input matInput placeholder="courtsName" formControlName="courtsName">
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+              <input matInput placeholder="courtImageUrl" formControlName="courtImageUrl">
+          </mat-form-field>
+        </div>
+
+        <div class="col">
+          <mat-form-field class="full-width">
+              <input matInput placeholder="courtPrice" formControlName="courtPrice">
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+              <input matInput placeholder="status" formControlName="status">
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" type="submit"  [disabled]="!courtForm.valid" mat-dialog-close >Submit</button>
+      <button mat-raised-button mat-dialog-close color="warn" >Close</button>
+    </mat-card-actions>
+  </mat-card>
+  </form>
+
+
+{{sportid}}
+
+
+
+
+
+

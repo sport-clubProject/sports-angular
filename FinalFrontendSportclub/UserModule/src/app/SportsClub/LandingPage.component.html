@@ -1,0 +1,24 @@
+<div>
+  <navbar></navbar>
+</div>
+<br><br>
+   <div id="image-main">
+
+   <img src="https://wallpaperset.com/w/full/3/e/c/239836.jpg" class="d-block w-100" alt="Sunset Over the City"  style="opacity: 0.4;height: 94.3vh;"/>
+
+
+   <div class="stadiumdiv">
+    <div style="margin-left: 15%;font-size: 30px;text-align: center;padding-top: 22px;display: flex;"><div><p>Ready to</p></div><div style="color: white;padding:10px 10px 32px 10px;background-color: rgb(15 23 42);height: 5vh; border-radius: 5px;margin:-10px 7px;"><p>Find Stadium </p></div> <div style="margin:0px 4px;"><p>Around You</p></div></div>
+    <div class="searchbar">
+     <input placeholder="Search stadium" type="text" style="border: white solid 2px;margin: 10px 0px 0px 35px;width: 84%;height: 5vh;" [(ngModel)]="searchQuery">
+    </div>
+    <p style="font-size: 15px;padding: 10px 0px 0px 153px;">Popular stadiums</p>
+    <div style="display: flex;" class="main-div">
+    <div class="stadiumbuttonsdiv" *ngFor="let item of stadiums">
+      <button (click)="sportType(item.stadiumName)"   [routerLink]="['/Sports',item.stadiumId]" routerLinkActive="router-link-active">{{item.stadiumName}}</button>
+      <!-- <button>ssssssssssssssssssssssss</button><button>sssssssss</button><button>ddddddd</button><button>ddddddd</button> -->
+     </div>
+   </div>
+  </div>
+
+</div>

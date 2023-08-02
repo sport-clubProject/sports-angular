@@ -1,0 +1,160 @@
+/* {
+  box-sizing: border-box;
+}
+
+.payments{
+
+  position: fixed;
+  height: 70%;
+  width: 100%;
+  top: 7%;
+  /* background-image: url("../../../assets/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: black;
+}
+.payments-main{
+  background-color: #00000079;
+}
+
+
+.payment-sidebar h4{
+
+  font-weight: bold;
+
+}
+.payment-sidebar img{
+width: 150px;
+height: 100px;
+}
+.payment-sidebar img:hover{
+  border: rgb(8, 8, 10);
+}
+
+ .payment-continer{
+  background: rgb(240, 182, 240);
+}
+
+#cnet img{
+  width: 200px;
+  height: 100px;
+  border: 2px solid white;
+  border-radius: 20px;
+}
+
+
+.one{
+  box-shadow: 0px 0px 70px red;
+}
+
+.cardmain{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+} */
+
+
+*{
+  box-sizing: border-box;
+}
+#payments-id{
+  margin-top: 43px;
+}
+.payments{
+
+  position: fixed;
+  height: 70%;
+  width: 100%;
+  top: 7%;
+  /* background-image: url("../../../assets/background.png"); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: black;
+}
+.payments-main{
+  background-color: #00000079;
+}
+
+
+.payment-sidebar h4{
+
+  font-weight: bold;
+
+}
+.payment-sidebar img{
+width: 150px;
+height: 100px;
+}
+.payment-sidebar img:hover{
+  border: rgb(8, 8, 10);
+}
+
+/* .payment-continer{
+  background: rgb(240, 182, 240);
+} */
+
+#cnet img{
+  width: 200px;
+  height: 100px;
+  border: 2px solid white;
+  border-radius: 20px;
+}
+
+
+.one{
+  box-shadow: 0px 0px 70px red;
+}
+
+.cardmain{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+}
+.card{
+  height: 300px;
+  width: 350px;
+}
+#otp{
+  margin-top: 15px;
+  position: relative;
+  left: -8px;
+  width: 175px;
+}
+.generate-otp{
+  margin-top: 11px;
+  margin-left: 27px;
+}
+.enter-otp{
+  margin-top: 68px;
+}
+.lable-otp{
+  margin-top: 5px;
+}
+.cardmain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 400px;
+  margin: 20px;
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.input-group {
+  display: flex;
+}
+
+.input-group .form-control {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+

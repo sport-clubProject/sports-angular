@@ -1,0 +1,41 @@
+/* slot-dialog.component.css */
+@import '~@angular/material/theming';
+
+/* Styles for the modal dialog */
+.mat-dialog-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styles for the form fields */
+mat-form-field {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* Styles for the buttons in the dialog actions */
+mat-dialog-actions {
+  justify-content: flex-end;
+  margin-top: 20px; /* Add some space between the buttons and the form fields */
+}
+
+/* Styles for the buttons with icons */
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styles for the "Save" button */
+button.save-button {
+  background-color: #4caf50; /* Set the button background color */
+  color: white; /* Set the button text color */
+  margin-right: 10px; /* Add some space between the "Save" and "Close" buttons */
+}
+
+/* Styles for the "Close" button */
+button.close-button {
+  background-color: #f44336; /* Set the button background color */
+  color: white; /* Set the button text color */
+}

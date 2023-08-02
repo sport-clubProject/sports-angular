@@ -1,0 +1,40 @@
+<!-- <div class="main-c">
+  <br><br><br><br><br>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2 col-md-4 col-lg-4" *ngFor="let sport of sports" >
+        <div class="card"  style="margin: 50px;">
+          <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="dark">
+            <img [src]="sport.sportImageUrl" width="100%" height="300px" (click)="gotoCourts(sport.sportId,sport.sportName)" />
+          </div>
+    </div>
+
+  </div>
+  </div>
+</div>
+ -->
+ <div>
+  <navbar></navbar>
+</div>
+<br><br><br>
+  <section style="height: 90vh;" >
+  <div style="width: 100%;height: 8vh;background-color: #4f4f4f;display: flex;">
+  <div style="padding: 15px 0px 0px 70px;font-size: 20px; margin-right: 320px;color: white;">Discover and Book Top Sports Complexes in Online</div>
+  <div style="padding: 0px 0px 0px 220px; width: 20px;" >
+    <select class="stadiumselection" name="select" id="" style="margin-top: 8px;font-size: 23px;padding:0px 0px 0px 100px;height: 5vh;border: white solid 1px;border: rgba(128, 128, 128, 0.473) solid 1px;border-radius: 11px;font-size: 20px;color: gray;width: 300px;">
+
+    <!-- <option *ngFor="let option of stadiums" [value]="option.stadiumName"  style="font-size: 25px;">{{option.stadiumName}}</option> -->
+    <option *ngFor="let option of stadiums" [value]="option.stadiumName">{{option.stadiumName}}</option>
+
+    <option  value="" selected>{{selectedSport}}</option>
+  </select>
+
+  </div>
+  </div>
+    <article>
+      <div  class="sportsdiv" *ngFor="let sport of getSports">
+         <img [src]="sport.sportImageUrl" alt="" (click)="gotoCourts(sport.sportId,sport.sportName)" c>
+      <div class="discription" ><p style="font-size: 25px;" >Sportname : {{sport.sportName}}</p></div>
+    </div>
+    </article>
+  </section>

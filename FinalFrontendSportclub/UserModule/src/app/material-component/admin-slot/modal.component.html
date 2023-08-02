@@ -1,0 +1,26 @@
+<h2 mat-dialog-title>Add Slot</h2>
+<mat-dialog-content>
+  <form #slotForm="ngForm">
+    <div class="form-field">
+      <mat-form-field>
+        <input matInput placeholder="Slot Time" name="slotTime" [(ngModel)]="slot.slotTime" required>
+      </mat-form-field>
+    </div>
+    <div class="form-field">
+      <mat-form-field>
+        <mat-label>Day</mat-label>
+        <mat-select name="day" [(ngModel)]="slot.day" required>
+          <mat-option *ngFor="let dayOption of days" [value]="dayOption">{{ dayOption }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions class="button-container">
+  <button mat-button color="primary" [disabled]="!slotForm.valid" (click)="onSave()">
+    <mat-icon>save</mat-icon> Save
+  </button>
+  <button mat-button color="warn" (click)="onClose()">
+    <mat-icon>close</mat-icon> Close
+  </button>
+</mat-dialog-actions>

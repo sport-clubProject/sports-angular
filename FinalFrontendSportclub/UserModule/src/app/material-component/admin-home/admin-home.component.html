@@ -1,0 +1,62 @@
+<mat-sidenav-container class="sidenav-container" >
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar><i class="fa-solid fa-user" style="margin-right: 10%;">
+    </i> Admin</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/admin/main/dashboard"> <i class="fa-solid fa-table-columns" style="margin-right: 5%;"></i> Dashboard</a>
+      <a mat-list-item [routerLink]="['/admin/AdminHome/adminstadium']"><i class="fa-solid fa-city" style="margin-right: 5%;"></i>All Stadiums</a>
+      <a mat-list-item [routerLink]="['/admin/AdminHome/addStadium']" ><i class="fa-solid fa-user-plus" style="margin-right: 5%;"></i> Add Stadium</a>
+      <a mat-list-item (click)="openAddSport()" ><i class="fa-solid fa-user-plus" style="margin-right: 5%;"></i> Add Sport</a>
+      <!-- routerLink="/admin/main/addcity" -->
+      <a mat-list-item (click)="openAddCourt()"> <i class="fa-solid fa-circle-plus" style="margin-right: 5%;"></i>Add Court</a>
+      <a mat-list-item routerLink="/admin/main/settings"> <i class="fa-solid fa-gears"style="margin-right: 5%;"></i>Settings</a>
+      <a mat-list-item  (click)="logout()" routerLink="/weekend"> <i class="fa-solid fa-arrow-right-from-bracket" style="margin-right: 5%;"></i>Logout</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" style="background-color: #14d8c8;" >
+      <button
+        type="button"
+        aria-label="Toggle sidenav"Add
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+
+      <!-- <mat-slide-toggle [formControl]="toggleControl">Dark Mode</mat-slide-toggle> -->
+      <!-- <button mat-raised-button color="primary" style="margin-left: 10px;"  (click)="loginPopUp()" >Login</button>
+<img src="https://img.icons8.com/material/512/admin-settings-male.png"  style="width:40px;height:40px"> -->
+
+
+<button [matMenuTriggerFor]="profile" mat-icon-button class="m-r-5"  style="margin-left: 1000px;">
+  <mat-icon>account_circle</mat-icon>
+</button>
+
+<mat-menu #profile="matMenu" class="mymegamenu">
+
+<button mat-menu-item >
+  <mat-icon >password</mat-icon> change passwoord
+</button>
+<button mat-menu-item (click)="logout()">
+  <mat-icon>lock_open</mat-icon> logout
+</button>
+</mat-menu>
+
+
+</mat-toolbar>
+
+    <!-- <ngx-ui-loader ></ngx-ui-loader> -->
+    <!-- <ngx-ui-loader ></ngx-ui-loader> -->
+
+
+    <div ngxUiLoaderBlurred   class="main">
+      <router-outlet></router-outlet>
+    </div>
+
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

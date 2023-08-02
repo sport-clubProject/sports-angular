@@ -1,0 +1,28 @@
+
+<button class="add-button" (click)="addSlot()">
+  <i class="fas fa-plus"></i> Add
+</button>
+
+<div class="slot-table">
+  <table>
+    <thead>
+      <tr>
+        <th>SlotTime</th>
+        <th>Day</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let slot of allslots">
+        <td>{{ slot.slotTime }}</td>
+        <td>{{ slot.day }}</td>
+        <td>
+          <button><i class="far fa-edit" (click)="updateslot(slot.slotId)"></i></button>
+          <button><i class="far fa-trash-alt" (click)="deleteslot(slot.slotId)"></i></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+

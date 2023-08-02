@@ -1,0 +1,20 @@
+<div *ngFor="let court of getCourts"  style="margin: 15px; display: inline-block;">
+  <mat-card class="example-card" style="width:250px">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image" style="height:inherit;" ></div>
+      <mat-card-title></mat-card-title>
+      <mat-card-subtitle>Exclusive</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image  [src]=court.courtImageUrl alt="Photo of a Shiba Inu" height="200px">
+    <mat-card-content>
+
+    </mat-card-content>
+    <mat-card-actions>
+      <!-- <button class="btn btn-primary" style="margin-right: 40px;"  mat-button (click)="removeCity(city.cityId)" >Remove</button> -->
+      <!-- <button  [routerLink]="['/admin/main/editcitydetail',city.cityId]" class="btn btn-danger"  mat-button>Show</button> -->
+      <button class="btn btn-danger" style="margin-right: 40px;" (click)="removeCourt(court.courtId)" >Delete</button>
+      <button  class="btn btn-primary"  >Edit</button>
+
+    </mat-card-actions>
+  </mat-card>
+  </div>

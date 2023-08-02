@@ -1,0 +1,40 @@
+
+<div class="container">
+  <br><br>
+  <input style="height: 4vh;width: 40%;margin-left: 5%;" type="text" placeholder="Search name" [(ngModel)]="search">
+  <br><br>
+ <table>
+  <thead>
+    <tr>
+      <th>UserName</th>
+      <th>Useremail</th>
+      <th>Mobile</th>
+      <th>Gender</th>
+      <th>Age</th>
+      <th>Role</th>
+      <th>Manage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of details">
+      <td>{{user.userName}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.userMobile}}</td>
+      <td>{{user.gender}}</td>
+      <td>{{user.userAge}}</td>
+      <td>{{user.role}}</td>
+      <td>
+        <label class="toggle">
+          <input type="checkbox" [(ngModel)]="user.isToggleOn" (change)="onToggleChange(user)">
+          <span class="slider"></span>
+        </label>
+      </td>
+    </tr>
+    <!-- Add more rows as needed -->
+  </tbody>
+</table>
+
+
+<!-- <p-messages [(value)]="message" [enableService]="false" [closable]="false"></p-messages> -->
+
+</div>

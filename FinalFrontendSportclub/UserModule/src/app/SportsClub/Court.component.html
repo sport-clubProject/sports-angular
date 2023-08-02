@@ -1,0 +1,62 @@
+<div>
+  <navbar></navbar>
+</div>
+<br><br><br><br>
+        <div class="col  d-flex justify-content-center">
+          <div class="form-row align-items-center">
+            <mat-label style="margin-right: 60px; margin-bottom: 10px;">Booking date</mat-label>
+            <mat-form-field class="wider-date-field" style="margin-right: 100px;" >
+              <input matInput [matDatepicker]="picker" [min]="minDate" placeholder="Choose a date" name="date" style="z-index: 8; margin-bottom: 10px;" [(ngModel)]="repo.selectedDate">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <button (click)="datesubmit()"  class="btn btn-success" >Save Date</button>
+          </div>
+        </div>
+
+
+<div >
+  <div class="main-c">
+    <br><br>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2 col-md-4 col-lg-4" *ngFor="let court of allcourts"    >
+          <div class="card"  style="margin: 50px;">
+            <div class="bg-image hover-overlay ripple"  data-mdb-ripple-color="dark">
+              <img [src]="court.courtImageUrl" width="100%" height="300px"  (click)="fetchslots(court.courtId)"/>
+            </div>
+            <div>
+              <p>CourtPrice:{{court.courtPrice}}</p>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-success" style="width: 100%;"  (click)="fetchslots(court.courtId)" >ShowSlots</button>
+            </div>
+      </div>
+    </div>
+    </div>
+  </div>
+  </div>
+
+
+  <div class="d-flex justify-content-center">
+    <ng-container *ngFor="let slot of slots">
+      <button type="button" class="btn btn-success" style="margin-right: 100px;" (click)="saveslot(slot)">{{ slot }}</button>
+    </ng-container>
+  </div>
+ <br><br><br><br><br>
+  <div class="d-flex justify-content-center" *ngIf="reviewbutt">
+    <button type="button" class="btn btn-success"  >Review</button>
+  </div>
+
+</div>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+
+
+
+

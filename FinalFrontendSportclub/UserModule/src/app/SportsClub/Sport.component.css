@@ -1,0 +1,122 @@
+/* .card{
+  margin-top: 20px;
+  border: 2px solid #ffffff;
+}
+.customcard{
+  border: 3px solid rgb(50, 223, 195);
+  box-shadow: 0px 0px 20px rgb(201, 101, 34);
+  margin: 30px;
+  border-radius: 10px;
+
+}
+.custompass{
+  background-color: #ff851b;
+  backdrop-filter: blur(3px);
+  margin-top: 30px;
+  padding-top: 50px;
+}
+.btn {
+  --color: #ff851b;
+  --color2: #fff;
+  background-color: transparent;
+  border-radius: 6px;
+  border: .3px solid var(--color);
+  transition: .5s;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+  font-weight: 300;
+  font-size: 17px;
+  font-family: 'Roboto', 'Segoe UI', sans-serif;
+  text-transform: uppercase;
+  color: var(--color);
+ }
+
+ .btn::after, .btn::before {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  transform: skew(90deg) translate(-50%, -50%);
+  position: absolute;
+  inset: 50%;
+  left: 25%;
+  z-index: -1;
+  transition: .5s ease-out;
+  background-color: var(--color);
+ }
+
+ .btn::before {
+  top: -50%;
+  left: -25%;
+  transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+ }
+
+ .btn:hover::before {
+  transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+ }
+
+ .btn:hover::after {
+  transform: skew(45deg) translate(-50%, -50%);
+ }
+
+ .btn:hover {
+  color: var(--color2);
+ }
+
+ .btn:active {
+  filter: brightness(.7);
+  transform: scale(.98);
+ }
+ .main-c{
+  background: var(--aysh);
+ }
+.card-body{
+  text-align: center;
+  font-weight: 1000;
+} */
+
+
+
+
+
+
+
+
+.sportsdiv{
+  margin-top: 20px;
+  background-color: white;
+  width: 450px;
+  height: 350px;
+  /* border: 2px solid black; */
+  border-radius: 5px;
+  margin-right: 15px;
+  margin-bottom: 30px;
+  box-shadow: 0px 5px 5px 0px;
+  overflow: hidden;
+  /* scale: 1px; */
+}
+.sportsdiv:hover{
+  scale: 0.98;
+  transition: 0.5s ease-in-out;
+}
+article{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.sportsdiv img{
+  height: 33vh;
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+}
+.discription{
+  margin-left: 25px;
+  background-color: white;
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

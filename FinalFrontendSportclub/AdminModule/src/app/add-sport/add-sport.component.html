@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sports Form</title>
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<body>
+  <div class="container">
+    <form class="sports-form" #form="ngForm" (ngSubmit)="savesport(form.value)">
+      <h2>Sports Information</h2>
+      <div class="container">
+        <div>
+          <select id="stadium" name="stadium" required [(ngModel)]="selectedstadium" style="width: 200px;height: 4vh;">
+            <option style="padding-left: 50px;" value="" disabled selected>Select a stadium</option>
+            <option  *ngFor="let stadium of stadiums">{{ stadium.stadiumName }}</option>
+            <!-- Add more options here as needed -->
+          </select>
+<br><br>
+
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="sportname">Sport Name:</label>
+        <input type="text" id="sportname" name="sportName" required [(ngModel)]="sport.sportName">
+      </div>
+      <div class="form-group">
+        <label for="sportimage">Sport Image URL:</label>
+        <input type="text" id="sportimage" name="sportImageUrl" required [(ngModel)]="sport.sportImageUrl">
+      </div>
+      <div class="form-group">
+        <label for="status">Status:</label>
+        <input type="text" id="status" name="status" required [(ngModel)]="sport.status">
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>

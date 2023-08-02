@@ -1,0 +1,41 @@
+
+<form [formGroup]="sportForm" novalidate (ngSubmit)="onSubmit()">
+
+  <mat-form-field appearance="fill" >
+    <mat-label>Select an option</mat-label>
+    <mat-select [(value)]="selected" onchange="send()">
+      <mat-option>None</mat-option>
+      <mat-option  value="{{sport.stadiumName}}" *ngFor="let sport of stadiumarray">{{sport.stadiumName}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <p>You selected: {{selected}}</p>
+
+
+
+    <mat-card class="shipping-card">
+    <mat-card-header>
+      <mat-card-title>Add Sport</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+              <input matInput placeholder="sportName" formControlName="sportName">
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+              <input matInput placeholder="sportImageUrl" formControlName="sportImageUrl">
+          </mat-form-field>
+        </div>
+
+
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button mat-dialog-close color="primary" type="submit" [disabled]="!sportForm.valid" mat-dialog-close >Submit</button>
+      <button mat-raised-button mat-dialog-close color="warn" >Close</button>
+    </mat-card-actions>
+  </mat-card>
+  </form>

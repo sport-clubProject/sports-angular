@@ -1,0 +1,25 @@
+<mat-toolbar>
+  <mat-toolbar-row class="justify-content-between">
+    <button mat-icon-button (click)="toggleSidebar()" style="margin-right: 980px;color: white;"><mat-icon>menu</mat-icon></button>
+    <div class="row mr-2 ml-auto">
+      <ul>
+        <li>
+          <button mat-button [mat-menu-trigger-for]="menu" class="user mt-2 " style="position: fixed;right: 0; top: 10px;color: white;">
+            <mat-icon class="user-image mr-1 p-2">account_circle</mat-icon>
+            UserName
+            <mat-icon class="user-image-icon ml-1">keyboard_arrow_down</mat-icon>
+          </button>
+          <div class="logout">
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+              <mat-icon>exit_to_app</mat-icon>
+              Logout
+            </button>
+          </mat-menu>
+        </div>
+        </li>
+      </ul>
+    </div>
+
+  </mat-toolbar-row>
+</mat-toolbar>

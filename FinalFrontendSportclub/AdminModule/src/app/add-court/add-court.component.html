@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Court Information Form</title>
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<body>
+  <div class="container">
+    <form class="court-form" #form="ngForm" (ngSubmit)="savecourt(form.value)">
+      <div class="container">
+        <div>
+          <select style="width: 200px;height: 4vh;" id="stadium" name="stadium" required [(ngModel)]="selectedstadium">
+            <option value="" disabled selected>Select a stadium</option>
+            <option  *ngFor="let stadium of stadiums">{{ stadium.stadiumName }}</option>
+            <!-- Add more options here as needed -->
+          </select>
+
+        </div>
+      </div>
+      <br>
+      <!-- <div class="form-group">
+        <label for="stadium">Sport:</label>
+        <select id="stadium" name="stadium" required >
+          <option value="" disabled selected>Select a Sport</option>
+          <option value="stadium1" *ngFor="let sport of sports" [(ngModel)]="selectedsport">{{sport.sportName}}</option>
+
+        </select>
+      </div> -->
+      <!-- {{sports|json}} -->
+      <div class="container">
+        <div>
+          <select style="width: 200px;height: 4vh;" id="stadium" name="stadium" required [(ngModel)]="selectedsport">
+            <option value="" disabled selected>Select a Sport</option>
+            <option  *ngFor="let sport of sports" >{{sport.sportName}}</option>
+            <!-- Add more options here as needed -->
+
+          </select>
+          <br><br>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="court-name">Court Name:</label>
+        <input type="text" id="court-name" name="courtName" required [(ngModel)]="courtref.courtName">
+      </div>
+      <div class="form-group">
+        <label for="category">Category:</label>
+        <input type="text" id="category" name="category" required [(ngModel)]="courtref.category">
+      </div>
+      <div class="form-group">
+        <label for="court-image">Court Image URL:</label>
+        <input type="text" id="court-image" name="courtImageUrl" required [(ngModel)]="courtref.courtImageUrl">
+      </div>
+      <div class="form-group">
+        <label for="court-price">Court Price:</label>
+        <input type="number" id="court-price" name="courtPrice" required [(ngModel)]="courtref.courtPrice">
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
+

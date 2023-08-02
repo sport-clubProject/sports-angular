@@ -1,0 +1,32 @@
+
+
+  <mat-card class="shipping-card">
+    <form [formGroup]="stadiumForm"  (ngSubmit)="onSubmit()">
+      <mat-card-header class="mb-2 mat-header">
+        <mat-card-title class="text-center">Add Stadium</mat-card-title>
+      </mat-card-header>
+      <hr>
+      <mat-card-content>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+                <input matInput placeholder="stadiumName" formControlName="stadiumName">
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+                <input matInput placeholder="location" formControlName="location">
+            </mat-form-field>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" type="submit" [disabled]="!stadiumForm.valid" mat-dialog-close >Submit</button>
+        <!-- <button mat-raised-button mat-dialog-close color="warn" >Close</button> -->
+      </mat-card-actions>
+  </form>
+</mat-card>
+
+
